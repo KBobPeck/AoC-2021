@@ -1,5 +1,5 @@
 const input = require("../uploads/day4").split("\n\n");
-const fs = require('fs')
+const fs = require("fs");
 
 let answerA = {
   balls: input[0].split(","),
@@ -62,8 +62,6 @@ answerA.final =
   answerA.winningBoard.reduce((prev, curr) => +prev + +curr) *
   answerA.winningNumber;
 
-console.log(answerA);
-
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -113,15 +111,13 @@ answerB.balls.forEach((ball) => {
           //each[0] is a string like 'b2r0' where b is the index of the board and r/c is the row or col
           tempWinner = each[0];
           answerB.winningNumber = ball;
-          if (
-            !answerB.winningBoards.includes(tempWinner.match(/b(\d+)/)[1])
-          ) {
-            answerB.winner = each[0]
+          if (!answerB.winningBoards.includes(tempWinner.match(/b(\d+)/)[1])) {
+            answerB.winner = each[0];
             answerB.winningBoards.push(answerB.winner.match(/b(\d+)/)[1]);
             answerB.winningBoard =
               answerB.boards[answerB.winner.match(/b(\d+)/)[1]].flat();
           }
-          answerB.boardMatches[each[0]] = 'WON!';
+          answerB.boardMatches[each[0]] = "WON!";
         }
       });
     }
@@ -142,10 +138,31 @@ answerB.final =
   answerB.winningBoard.reduce((prev, curr) => +prev + +curr) *
   answerB.winningNumber;
 
-console.log(answerB);
+answerA.balls =
+  "removed for readability, please comment on line 140-150 to see";
+answerA.boardMatches =
+  "removed for readability, please comment on line 140-150 to see";
+answerA.boards =
+  "removed for readability, please comment on line 140-150 to see";
+answerA.winningBoard =
+  "removed for readability, please comment on line 140-150 to see";
+answerA.usedBalls =
+  "removed for readability, please comment on line 140-150 to see";
+answerB.winningBoards =
+  "removed for readability, please comment on line 140-150 to see";
+answerB.usedBalls =
+  "removed for readability, please comment on line 140-150 to see";
+answerB.balls =
+  "removed for readability, please comment on line 140-150 to see";
+answerB.boardMatches =
+  "removed for readability, please comment on line 140-150 to see";
+answerB.boards =
+  "removed for readability, please comment on line 140-150 to see";
 
-fs.writeFileSync('../out/day4.json', JSON.stringify({answerA, answerB}) , {encoding:'utf-8', flag:'w'})
-
+fs.writeFileSync("../out/day4.json", JSON.stringify({ answerA, answerB }), {
+  encoding: "utf-8",
+  flag: "w",
+});
 
 //SADNESS BELOW
 // const [line, dir, num] = answerA.winningBoard.match(/([rc])(\d+)/);
