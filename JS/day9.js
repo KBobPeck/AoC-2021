@@ -8,6 +8,7 @@ const answerA = { final: 0 };
 //we check to see if the value exists, if it does then we use it if not we give it a value of -1 to make sure it is less
 const maxRows = input.length;
 const maxCols = input[0].length;
+console.log(maxRows, maxCols);
 for (r in input) {
   for (c in input[r]) {
     const current = input[r][c];
