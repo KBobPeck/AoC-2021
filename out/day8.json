@@ -1,1 +1,14 @@
-{ "answerA": { "final":   , "checkedDigits": [2, 3, 4, 7] } }
+{
+  "answerA": { "final": 416, "checkedDigits": [2, 3, 4, 7] },
+  "answerB": {
+    "final": 0,
+    "sorted": {
+      "2": ["ed"],
+      "3": ["edb"],
+      "4": ["egda"],
+      "5": ["befcg", "dcabg", "debgc"],
+      "6": ["bgadfc", "dfaecb", "agcdbe"],
+      "7": ["cdfegab"]
+    }
+  }
+}
